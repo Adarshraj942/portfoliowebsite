@@ -206,7 +206,7 @@ $(function () {
 $(document).ready(function() {
 
     jQuery.validator.addMethod("noSpace", function(value, element) { 
-       return value.indexOf(" ") < 0 && value != ""; 
+       return  value[0]!=0 && value != ""; 
     }, "Space are not allowed for second name add -");
 
 
@@ -248,7 +248,7 @@ $(document).ready(function() {
       errorLabelContainer: $("#form-messages"),
       rules: {
         fname: { alpha:true, required: true, noSpace: true, minimumlength:4, maximumlength:20 },
-        fmessage: { required: true, },
+        fmessage: { required: true, noSpace:true },
         fmail:{ required:true, laxEmail:true },
         fnumber:{ required:true, noSpace:true, digits:true , exactlength:10 ,  }
       },
