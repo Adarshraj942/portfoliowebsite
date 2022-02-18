@@ -206,8 +206,8 @@ $(function () {
 $(document).ready(function() {
 
     jQuery.validator.addMethod("noSpace", function(value, element) { 
-       return  value[0]!=0 && value != ""; 
-    }, "Space are not allowed for second name add -");
+      return value != "" && value[0]!=0;
+    }, "Space are not allowed in first position");
 
 
 
